@@ -11,8 +11,6 @@
 .container {
     margin: auto;
     padding: 2em;
-    /* display: grid; */
-    /* grid-template-rows: 3em 2em 8em 1fr; */
 }
 
 .helperText {
@@ -63,8 +61,8 @@
 }
 
 .selected-category, .categories li button:active, .categories li button:focus {
-    color: var(--highlight);
-    background-color:white;
+    color: var(--highlight) !important;
+    background-color:white !important;
     border: solid 1px var(--highlight) !important;
     outline: 0;
     font-weight: 500;

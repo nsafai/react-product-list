@@ -20,18 +20,12 @@ class App extends Component {
   }
 
   getCategories() { 
-    return categories.map( (category) => {
-      if(category.name === this.currentCategory) {
-        return <Category name = { category } 
+    return categories.map( (category) => 
+      <Category name = { category } 
                 onClickFunction = { this.filterBy.bind(this) } 
-        />
-      } else {
-        return <Category name = { category } 
-                onClickFunction = { this.filterBy.bind(this) }
-                className="selected-category"
-        />
-      }
-    })
+                currentCategory = { this.state.currentCategory }
+      /> 
+    )
   }
 
   getInventory() {

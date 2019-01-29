@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Category = ({ name, filterFunction }) => {
+const Category = ({ name, onClickFunction }) => {
 
   return (
     <li key={name} 
         className="category" 
-        onClick={ () => { filterFunction(name) } } 
+        onClick={ () => { onClickFunction(name) } } 
         >
         <button>{name}</button>
     </li>

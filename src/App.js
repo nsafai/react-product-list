@@ -15,14 +15,13 @@ class App extends Component {
     }
   }
 
-  clickCategory(cat) {
-    console.log('inside click category');
-    this.setState({ currentCategory: cat });
+  filterBy(category) {
+    this.setState({ currentCategory: category });
   }
 
   getCategories() { 
-    return categories.map( (cat) => 
-      <Category name={cat} filterFunction={ this.clickCategory.bind(this) } /> 
+    return categories.map( (category) => 
+      <Category name={ category } onClickFunction={ this.filterBy.bind(this) } /> 
     )
   }
 

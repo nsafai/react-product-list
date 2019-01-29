@@ -20,11 +20,18 @@ class App extends Component {
   }
 
   getCategories() { 
-    return categories.map( (category) => 
-      <Category name = { category } 
+    return categories.map( (category) => {
+      if(category.name === this.currentCategory) {
+        return <Category name = { category } 
                 onClickFunction = { this.filterBy.bind(this) } 
-      /> 
-    )
+        />
+      } else {
+        return <Category name = { category } 
+                onClickFunction = { this.filterBy.bind(this) }
+                className="selected-category"
+        />
+      }
+    })
   }
 
   getInventory() {
@@ -48,13 +55,15 @@ class App extends Component {
         <h1>Products</h1>
         
         <p className="helperText">Filter by category:</p>
+        
         <ul className="categories">
-          { this.getCategories() }
+          <Category name="All" onClickFunction={ this.filterBy.bind(this, null) } />
+          { this.getCategories() }        
         </ul>
 
         <hr></hr>
 
-        <h2 className="headerText">{ this.state.currentCategory || "All Items" }</h2>
+        <h2 className="headerText">{ this.state.currentCategory || "All Products" }</h2>
 
         <ul className="products">
           { this.getInventory() }

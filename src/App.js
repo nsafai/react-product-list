@@ -21,13 +21,24 @@ class App extends Component {
 
   getCategories() { 
     return categories.map( (category) => 
-      <Category name={ category } onClickFunction={ this.filterBy.bind(this) } /> 
+      <Category name= { category } 
+                onClickFunction= { this.filterBy.bind(this) } 
+      /> 
     )
   }
 
   getInventory() {
-    return inventory.map(({ id, name, description, price }) => 
-      <Product id={id} name={name} description={description} price={price} /> 
+    return inventory
+    .filter((item) => {
+      return item.category === this.state.currentCategory || this.state.currentCategory === null
+    })
+    .map(({ id, name, category, description, price }) => 
+      <Product  id= { id } 
+                name= { name } 
+                category= { category } 
+                description= { description } 
+                price= { price} 
+      /> 
     )
   }
 

@@ -47,11 +47,14 @@ class App extends Component {
       <div className="container">
         <h1>Products</h1>
         
+        <p className="helperText">Filter by category:</p>
         <ul className="categories">
           { this.getCategories() }
         </ul>
 
-        <h2 className="helperText">{ this.state.currentCategory || "All Items" }</h2>
+        <hr></hr>
+
+        <h2 className="headerText">{ this.state.currentCategory || "All Items" }</h2>
 
         <ul className="products">
           { this.getInventory() }

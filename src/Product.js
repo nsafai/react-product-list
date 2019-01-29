@@ -9,7 +9,7 @@ const Product = ({ id, name, category, description, price }) => {
             <h2 className="prod-title">{ name }</h2>   
         </div>
         <p className="prod-price">${ price }</p>
-        <p>{ description }</p>
+        <p className="prod-description">{ description }</p>
     </li>
   )
 }

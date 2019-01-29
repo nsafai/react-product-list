@@ -3,13 +3,14 @@ import React from 'react'
 const Product = ({ id, name, category, description, price }) => {
 
   return (
-    <div key={ id } className="product">
-        <h1>{ name }</h1>
-        <h4>{ category }</h4>
+    <li key={ id } className="product">
+        <div className="prod-header">
+            <p className="prod-category">{ category }</p>
+            <h2 className="prod-title">{ name }</h2>   
+        </div>
+        <p className="prod-price">${ price }</p>
         <p>{ description }</p>
-        <p>${ price }</p>
-        
-    </div>
+    </li>
   )
 }
 

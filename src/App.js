@@ -21,8 +21,8 @@ class App extends Component {
 
   getCategories() { 
     return categories.map( (category) => 
-      <Category name= { category } 
-                onClickFunction= { this.filterBy.bind(this) } 
+      <Category name = { category } 
+                onClickFunction = { this.filterBy.bind(this) } 
       /> 
     )
   }
@@ -33,26 +33,27 @@ class App extends Component {
       return item.category === this.state.currentCategory || this.state.currentCategory === null
     })
     .map(({ id, name, category, description, price }) => 
-      <Product  id= { id } 
-                name= { name } 
-                category= { category } 
-                description= { description } 
-                price= { price} 
+      <Product  id = { id } 
+                name = { name } 
+                category = { category } 
+                description = { description } 
+                price = { price} 
       /> 
     )
   }
 
   render() {
     return (
-      <div className="App">
-        <h1>Show products here</h1>
-        <p>Current category: { this.state.currentCategory }</p>
-
-        <ul>
+      <div className="container">
+        <h1>Products</h1>
+        
+        <ul className="categories">
           { this.getCategories() }
         </ul>
 
-        <ul>
+        <h2 className="helperText">{ this.state.currentCategory || "All Items" }</h2>
+
+        <ul className="products">
           { this.getInventory() }
         </ul>
 

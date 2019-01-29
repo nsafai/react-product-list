@@ -62,7 +62,7 @@
     font-weight: 500;
 }
 
-.categories li button:active, .categories li button:focus {
+.selected-category, .categories li button:active, .categories li button:focus {
     color: var(--highlight);
     background-color:white;
     border: solid 1px var(--highlight) !important;

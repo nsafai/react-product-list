@@ -29,11 +29,9 @@ class App extends Component {
   }
 
   getInventory() {
-    return inventory
-    .filter((item) => {
+    return inventory.filter((item) => {
       return item.category === this.state.currentCategory || this.state.currentCategory === null
-    })
-    .map(({ id, name, category, description, price }) => 
+    }).map(({ id, name, category, description, price }) => 
       <Product  id = { id } 
                 name = { name } 
                 category = { category } 

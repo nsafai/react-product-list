@@ -47,7 +47,7 @@
     background-color: var(--medium-grey);
     color:white;
     font-size:0.7em;
-    padding: 0.3em 1em;
+    padding: 0.8em 1.5em;
     border-radius: 0.2em;
 }
 
@@ -81,6 +81,7 @@
 .products li {
     list-style:none;
     border: solid 1px var(--medium-grey);
+    background-color:white;
     border-radius: 0.1em;
     padding: 0.5em;
 }

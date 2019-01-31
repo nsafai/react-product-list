@@ -1,10 +1,8 @@
-# React Product List Challenge
+# React Product List 
 
-This is a learning project to deepen my React knowledge. The goal is to create a page that displays a list of **products** and a list of **categories** for those products, using React components. Clicking one of the category buttons should filter the list of products.
+This is a learning project with the goal of increasing my React knowledge. It is not intended to be released as a standalone product. 
 
-
-This project makes use of functional programming concepts in React and explores Javascript functions including [`Array.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`Array.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), and [`Array.reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). 
-
+The goal for this learning project is to create a page that displays a list of **products** and a list of **categories** for those products, using React components. Clicking one of the category buttons should filter the list of products.This project makes use of functional programming concepts in React and explores Javascript functions including [`Array.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`Array.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), and [`Array.reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). 
 
 ## Database
 
